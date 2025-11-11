@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.UserRegistrationFormController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="459.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserRegistrationFormController">
+   <children>
+      <ImageView fitHeight="458.0" fitWidth="863.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/clothify.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" height="374.0" layoutX="267.0" layoutY="31.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="391.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Rectangle>
+      <Text fill="#da5508" layoutX="340.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USER REGISTRATION">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Text>
+      <Text fill="#c7500e" layoutX="344.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Creat Your New Account !!">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtUsername" disable="true" focusColor="WHITE" layoutX="374.0" layoutY="137.0" prefHeight="25.0" prefWidth="187.0" style="-fx-background-color: white;" text=" Username" unFocusColor="#ffaaaa" />
+      <JFXTextField fx:id="txtEmail" disable="true" focusColor="WHITE" layoutX="375.0" layoutY="190.0" prefHeight="25.0" prefWidth="187.0" style="-fx-background-color: white;" text="Email" unFocusColor="#ffaaaa" />
+      <JFXTextField fx:id="txtPassword" disable="true" focusColor="WHITE" layoutX="375.0" layoutY="242.0" prefHeight="25.0" prefWidth="187.0" style="-fx-background-color: white;" text="Password" unFocusColor="#ffaaaa" />
+      <JFXTextField fx:id="txtConfirmPassword" disable="true" focusColor="WHITE" layoutX="375.0" layoutY="288.0" prefHeight="25.0" prefWidth="187.0" style="-fx-background-color: white;" text="Confirm Password" unFocusColor="#ffaaaa" />
+      <JFXButton fx:id="btnRegister" disable="true" layoutX="426.0" layoutY="347.0" onAction="#btnRegisterOnAction" opacity="0.76" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #2ecc71;" text="REGISTER" textFill="#1b1616">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </JFXButton>
+   </children>
 </AnchorPane>
