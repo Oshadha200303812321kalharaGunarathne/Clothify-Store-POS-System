@@ -4,8 +4,12 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 
-public class UserRegistrationFormController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class UserRegistrationFormController implements Initializable {
 
     @FXML
     private JFXButton btnRegister;
@@ -27,5 +31,9 @@ public class UserRegistrationFormController {
 
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
 }
 
