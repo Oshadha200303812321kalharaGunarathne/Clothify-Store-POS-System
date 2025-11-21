@@ -4,6 +4,7 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -18,7 +19,7 @@
             <Image url="@../images/clothify.jpg" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="50.0" arcWidth="50.0" height="374.0" layoutX="432.0" layoutY="45.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="338.0">
+      <Rectangle arcHeight="50.0" arcWidth="50.0" height="374.0" layoutX="425.0" layoutY="45.0" opacity="0.49" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="338.0">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
@@ -33,27 +34,35 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <JFXTextField fx:id="txtUsername" disable="true" focusColor="WHITE" layoutX="508.0" layoutY="151.0" prefHeight="34.0" prefWidth="210.0" style="-fx-background-color: white;" text=" Username" unFocusColor="#ffaaaa" />
-      <JFXTextField fx:id="txtPassword" disable="true" focusColor="WHITE" layoutX="508.0" layoutY="219.0" prefHeight="34.0" prefWidth="210.0" style="-fx-background-color: white;" text="Password" unFocusColor="#ffaaaa" />
+      <JFXTextField fx:id="txtUsername" focusColor="WHITE" layoutX="508.0" layoutY="151.0" opacity="0.49" prefHeight="34.0" prefWidth="210.0" promptText="Username" style="-fx-background-color: white;" unFocusColor="#ffaaaa" />
       <Text fill="#ff790c" layoutX="508.0" layoutY="287.0" onMouseClicked="#lblMouseClickOnAction" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot Password ?">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Text>
-      <JFXButton fx:id="btnLogin" disable="true" layoutX="547.0" layoutY="319.0" onAction="#btnLoginOnAction" opacity="0.76" prefHeight="25.0" prefWidth="136.0" style="-fx-background-color: #2ecc71;" text="LOGIN" textFill="#1b1616">
+      <JFXButton layoutX="547.0" layoutY="319.0" onAction="#btnLoginOnAction" opacity="0.76" prefHeight="25.0" prefWidth="136.0" style="-fx-background-color: #2ecc71;" text="LOGIN" textFill="#1b1616">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
       <Text fill="#ff790c" layoutX="460.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don’t have an account ?    " />
-      <Text fill="#ff790c" layoutX="694.0" layoutY="393.0" onMouseClicked="#lblRegisterMouseClickOnAction" strokeType="OUTSIDE" strokeWidth="0.0" text="Register" />
+      <Text fill="#ff790c" layoutX="694.0" layoutY="393.0" onMouseClicked="#lblRegisterMouseClickOnAction" strokeType="OUTSIDE" strokeWidth="0.0" text="Register">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Text>
       <Rectangle arcHeight="50.0" arcWidth="50.0" height="409.0" layoutX="44.0" layoutY="30.0" opacity="0.58" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="273.0" />
       <Text fill="#e1e1e1" layoutX="92.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TrendVibe is expected to segment its business market based on consumer demographics, gender, and income level.The target market for the brand includes young professionals, young adults, fashion enthusiasts, consumers interested in sustainable and ethically sourced clothing,middle-income families looking for quality clothing for themselves and their children,and young children. Specifically, it is focused on international markets. With a strong focus on fashion, comfort, and affordability, TrendVibe is positioned as a brand for consumers to find style and value in their clothing purchases." textAlignment="CENTER" wrappingWidth="183.0" />
-      <Text layoutX="215.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
       <Label layoutX="82.0" layoutY="40.0" prefWidth="202.0" text=" TREND VIBE" textFill="WHITE">
          <font>
             <Font name="System Bold" size="31.0" />
          </font>
       </Label>
+      <PasswordField fx:id="txtPassword" layoutX="508.0" layoutY="219.0" opacity="0.49" prefHeight="32.0" prefWidth="210.0" promptText="Password" />
    </children>
 </AnchorPane>

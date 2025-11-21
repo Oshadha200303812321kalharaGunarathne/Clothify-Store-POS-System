@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static javafx.fxml.FXMLLoader.load;
+
 public class WelcomeFormController {
 
     @FXML
