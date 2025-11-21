@@ -13,7 +13,7 @@ public class DBConnection {
         connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ClothifyStore","root","1234");
     }
 
-    private DBConnection getInstance() throws SQLException {
+    public static DBConnection getInstance() throws SQLException {
         return instance == null? instance = new DBConnection():instance;
     }
 
