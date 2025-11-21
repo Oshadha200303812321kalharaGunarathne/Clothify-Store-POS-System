@@ -24,9 +24,6 @@ import java.sql.SQLException;
 public class LoginFormController {
 
     @FXML
-    private JFXButton btnLogin;
-
-    @FXML
     private PasswordField txtPassword;
 
     @FXML
