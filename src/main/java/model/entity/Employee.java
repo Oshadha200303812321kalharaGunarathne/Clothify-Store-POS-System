@@ -1,6 +1,7 @@
-package model;
+package model.entity;
 
 
+import jakarta.persistence.*;
 import lombok.*;
 
 @Setter
@@ -8,8 +9,12 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Entity
+@Table(name = "Employee")
 
 public class Employee {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String name;
     private String title;
