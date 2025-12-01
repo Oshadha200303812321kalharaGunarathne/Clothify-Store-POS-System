@@ -14,24 +14,19 @@ import java.io.IOException;
 import static javafx.fxml.FXMLLoader.load;
 
 public class WelcomeFormController {
-
     @FXML
     private Button btnNext;
-
     @FXML
     void btnNextOnAction(ActionEvent event) {
         try {
-            Parent root= FXMLLoader.load(getClass().getResource("/view/login_form.fxml"));
-
+            Parent root= FXMLLoader.load(getClass().getResource("/view/dashboard_form.fxml"));
             Stage stage=new Stage();
             stage.setScene(new Scene(root));
             Stage currentStage=(Stage) ((Node) event.getSource()).getScene().getWindow();
             currentStage.close();
             stage.show();
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
-
 }

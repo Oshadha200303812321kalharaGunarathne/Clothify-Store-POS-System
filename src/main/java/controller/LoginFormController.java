@@ -1,6 +1,5 @@
 package controller;
 
-import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
@@ -12,7 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import model.User;
+import model.dto.User;
 import util.CrudUtil;
 
 
@@ -81,7 +80,7 @@ public class LoginFormController {
     @FXML
     void lblMouseClickOnAction(MouseEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/view/forgot_password_form.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/view/forgot_password.fxml"));
             Stage stage=new Stage();
             stage.setScene(new Scene(root));
             Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
