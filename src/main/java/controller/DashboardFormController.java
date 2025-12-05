@@ -6,9 +6,11 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -24,6 +26,9 @@ public class DashboardFormController {
 
     @FXML
     private Label lblTime;
+
+    @FXML
+    private AnchorPane contentArea;
 
     public void initialize(){
         setDate();
@@ -47,13 +52,15 @@ public class DashboardFormController {
         clock.play();
     }
 
-    private void openWindow(String fxmlName, String title) {
+    private void loadUI(String fileName) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/view/" + fxmlName + ".fxml"));
-            Stage stage = new Stage();
-            stage.setTitle(title);
-            stage.setScene(new Scene(root));
-            stage.show();
+            Node node = FXMLLoader.load(getClass().getResource("/view/" + fileName + ".fxml"));
+            contentArea.getChildren().setAll(node);
+
+            AnchorPane.setTopAnchor(node, 0.0);
+            AnchorPane.setBottomAnchor(node, 0.0);
+            AnchorPane.setLeftAnchor(node, 0.0);
+            AnchorPane.setRightAnchor(node, 0.0);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -62,42 +69,52 @@ public class DashboardFormController {
 
     @FXML
     void btnEmployeeOnAction(ActionEvent event) {
-        openWindow("employee_registration_form", "Employee Management");
+        loadUI("employee_registration_form");
     }
 
     @FXML
     void btnItemsOnAction(ActionEvent event) {
-        openWindow("items_form", "Items Management");
+        loadUI("items_form");
     }
 
     @FXML
     void btnLoginOnAction(ActionEvent event) {
-        openWindow("login_form", "User Login");
+        try {
+            Parent root=FXMLLoader.load(getClass().getResource("/view/login_form.fxml"));
+            Stage stage=new Stage();
+            stage.setScene(new Scene(root));
+            Stage currentStage=(Stage) ((Node) event.getSource()).getScene().getWindow();
+            currentStage.close();
+            stage.setResizable(false);
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
     void btnOrderDetailsOnAction(ActionEvent event) {
-        openWindow("order_details_form", "Order Details");
+        loadUI("order_details_form");
     }
 
     @FXML
     void btnOrderOnAction(ActionEvent event) {
-        openWindow("order_form", "Place Order");
+        loadUI("order_form");
     }
 
     @FXML
     void btnReportsOnAction(ActionEvent event) {
-        openWindow("reports_form", "Reports");
+        loadUI("reports_form");
     }
 
     @FXML
     void btnReturnsOnAction(ActionEvent event) {
-        openWindow("sales_return_form", "Sales Return");
+        loadUI("sales_return_form");
     }
 
     @FXML
     void btnSupplierOnAction(ActionEvent event) {
-        openWindow("supplier_form", "Supplier Management");
+        loadUI("supplier_form");
     }
 
 }
