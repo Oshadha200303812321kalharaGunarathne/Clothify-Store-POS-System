@@ -9,7 +9,6 @@ public class Starter extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-
     public void start(Stage stage) throws IOException {
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/welcome_form.fxml"))));
         stage.setResizable(false);

@@ -1,6 +1,5 @@
-package model.entity;
+package model.dto;
 
-import jakarta.persistence.*;
 import lombok.*;
 
 @Getter
@@ -8,12 +7,8 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Entity
-@Table(name = "Item")
 
 public class Item {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private String itemCode;
     private String description;
     private String quantity;

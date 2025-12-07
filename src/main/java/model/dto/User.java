@@ -1,5 +1,5 @@
-package model.entity;
-import jakarta.persistence.*;
+package model.dto;
+
 import lombok.*;
 
 @Getter
@@ -7,12 +7,8 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Entity
-@Table(name = "`user`")
 
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
     private String userName;
     private String password;

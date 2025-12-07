@@ -1,7 +1,6 @@
-package model.entity;
+package model.dto;
 
 
-import jakarta.persistence.*;
 import lombok.*;
 
 @Setter
@@ -9,20 +8,18 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Entity
-@Table(name = "Employee")
 
 public class Employee {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
     private String name;
     private String title;
     private String address;
+    private String email;
     private String nic;
     private String contact;
     private String dob;
     private String city;
+    private String jobRole;
     private String bankAccountNo;
     private String bankBranch;
 }

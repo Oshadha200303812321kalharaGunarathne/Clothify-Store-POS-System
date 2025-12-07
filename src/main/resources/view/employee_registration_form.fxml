@@ -1,14 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.EmployeeRegistrationFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="rootPane" prefHeight="634.0" prefWidth="1137.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeRegistrationFormController">
+   <children>
+      <ImageView fitHeight="645.0" fitWidth="1150.0" layoutX="-1.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/clothify.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#fc7e00" layoutX="400.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EMPLOYEE REGISTRATION">
+         <font>
+            <Font name="System Bold" size="37.0" />
+         </font>
+      </Text>
+      <Text fill="#db6309" layoutX="14.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtName" layoutX="107.0" layoutY="78.0" opacity="0.49" prefHeight="25.0" prefWidth="180.0" promptText="name" />
+      <Text fill="#db6309" layoutX="14.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtId" layoutX="107.0" layoutY="140.0" opacity="0.49" prefHeight="25.0" prefWidth="180.0" promptText="Id" />
+      <Text fill="#db6309" layoutX="14.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtAddress" layoutX="108.0" layoutY="192.0" opacity="0.49" prefHeight="25.0" prefWidth="180.0" promptText="Address" />
+      <Text fill="#db6309" layoutX="14.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIC">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#db6309" layoutX="351.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#db6309" layoutX="341.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Job Role">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtNIC" layoutX="110.0" layoutY="240.0" opacity="0.49" prefHeight="25.0" prefWidth="180.0" promptText="NIC" />
+      <TextField fx:id="txtContactNo" layoutX="110.0" layoutY="296.0" opacity="0.49" prefHeight="25.0" prefWidth="180.0" promptText="Contact No" />
+      <TextField fx:id="txtEmail" layoutX="414.0" layoutY="78.0" opacity="0.49" prefHeight="25.0" prefWidth="180.0" promptText="Email" />
+      <DatePicker fx:id="pickerDOB" layoutX="414.0" layoutY="140.0" opacity="0.49" prefHeight="25.0" prefWidth="130.0" />
+      <TextField fx:id="txtCity" layoutX="414.0" layoutY="195.0" opacity="0.49" prefHeight="25.0" prefWidth="130.0" promptText="City" />
+      <ComboBox fx:id="cmbTitle" layoutX="416.0" layoutY="239.0" opacity="0.49" prefHeight="25.0" prefWidth="92.0" />
+      <ComboBox fx:id="cmbJobRole" layoutX="416.0" layoutY="291.0" opacity="0.49" prefWidth="150.0" />
+      <Text fill="#db6309" layoutX="644.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account No">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtAccountNumber" layoutX="780.0" layoutY="77.0" opacity="0.49" prefHeight="25.0" prefWidth="150.0" promptText="Account Number" />
+      <Text fill="#db6309" layoutX="653.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Branch">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtBranch" layoutX="780.0" layoutY="139.0" opacity="0.49" prefHeight="25.0" prefWidth="150.0" promptText="Branch" />
+      <Text fill="#db6309" layoutX="619.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Name">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtAccountName" layoutX="780.0" layoutY="205.0" opacity="0.49" prefHeight="25.0" prefWidth="150.0" promptText="Account Name" />
+      <JFXButton fx:id="btnClear" layoutX="734.0" layoutY="281.0" onAction="#btnClearOnAction" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #2ecc71;" text="CLEAR" textFill="#1b1616">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="830.0" layoutY="280.0" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #2ecc71;" text="DELETE" textFill="#1b1616">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Text fill="#db6309" layoutX="9.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact No">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#db6309" layoutX="346.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="47.34765625000006">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#db6309" layoutX="344.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DOB">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#db6309" layoutX="347.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <TableView fx:id="empTable" layoutX="3.0" layoutY="355.0" opacity="0.49" prefHeight="281.0" prefWidth="1139.0" stylesheets="@../../../../../../clothify_store_pos-FX/src/main/resources/css/Table.css">
+         <columns>
+            <TableColumn fx:id="empColName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="empColID" prefWidth="106.0" text="ID" />
+            <TableColumn fx:id="empColAddress" prefWidth="99.0" text="Address" />
+            <TableColumn fx:id="empColNIC" prefWidth="121.0" text="NIC" />
+            <TableColumn fx:id="empColContactNo" prefWidth="97.0" text="Contact No" />
+            <TableColumn fx:id="empColEmail" prefWidth="147.0" text="Email" />
+            <TableColumn fx:id="empColDOB" minWidth="8.0" prefWidth="87.0" text="DOB" />
+            <TableColumn fx:id="empColCity" prefWidth="81.0" text="City" />
+            <TableColumn fx:id="empColTitle" prefWidth="57.0" text="Title" />
+            <TableColumn fx:id="empColJobRole" prefWidth="89.0" text="Job Role" />
+            <TableColumn fx:id="empColAccountNo" prefWidth="98.0" text="Account No" />
+            <TableColumn fx:id="empColBranch" prefWidth="79.0" text="Branch" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnUpdate" layoutX="924.0" layoutY="280.0" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #2ecc71;" text="UPDATE" textFill="#1b1616">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnBack" layoutX="1066.0" layoutY="14.0" onAction="#btnBackOnAction" opacity="0.47" prefHeight="49.0" prefWidth="69.0" style="-fx-background-color: #2ecc71;" text="BACK" textFill="#1b1616">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnSave" layoutX="634.0" layoutY="281.0" onAction="#btnSaveOnAction" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #2ecc71;" text="SAVE" textFill="#1b1616">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnView" layoutX="1024.0" layoutY="281.0" onAction="#btnViewOnAction" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #2ecc71;" text="VIEW" textFill="#1b1616">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
 </AnchorPane>
