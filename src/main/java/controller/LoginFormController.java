@@ -63,7 +63,7 @@ public class LoginFormController {
 
             if (rst.next()) {
                 return new User(
-                        rst.getInt("id"),
+                        rst.getString("id"),
                         rst.getString("username"),
                         rst.getString("password"),
                         rst.getString("email")
