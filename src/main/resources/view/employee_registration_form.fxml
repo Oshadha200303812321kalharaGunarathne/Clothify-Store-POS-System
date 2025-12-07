@@ -13,14 +13,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="rootPane" prefHeight="643.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeRegistrationFormController">
+<AnchorPane fx:id="rootPane" prefHeight="634.0" prefWidth="1137.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeRegistrationFormController">
    <children>
-      <ImageView fitHeight="669.0" fitWidth="1153.0" layoutX="-1.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="645.0" fitWidth="1150.0" layoutX="-1.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/clothify.jpg" />
          </image>
       </ImageView>
-      <Text fill="#fc7e00" layoutX="509.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EMPLOYEE REGISTRATION">
+      <Text fill="#fc7e00" layoutX="400.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EMPLOYEE REGISTRATION">
          <font>
             <Font name="System Bold" size="37.0" />
          </font>
@@ -119,20 +119,20 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </Text>
-      <TableView fx:id="empTable" layoutX="3.0" layoutY="337.0" opacity="0.49" prefHeight="281.0" prefWidth="1139.0" stylesheets="@../../../../../../clothify_store_pos-FX/src/main/resources/css/Table.css">
+      <TableView fx:id="empTable" layoutX="3.0" layoutY="355.0" opacity="0.49" prefHeight="281.0" prefWidth="1139.0" stylesheets="@../../../../../../clothify_store_pos-FX/src/main/resources/css/Table.css">
          <columns>
-            <TableColumn fx:id="empColId" prefWidth="75.0" text="Name" />
-            <TableColumn fx:id="empColName" prefWidth="106.0" text="ID" />
-            <TableColumn fx:id="empColNic" prefWidth="99.0" text="Address" />
-            <TableColumn fx:id="empColAddress" prefWidth="121.0" text="NIC" />
-            <TableColumn fx:id="empColDob" prefWidth="97.0" text="Contact No" />
-            <TableColumn fx:id="empColContact" prefWidth="147.0" text="Email" />
-            <TableColumn fx:id="empColBAccNo" minWidth="8.0" prefWidth="87.0" text="DOB" />
-            <TableColumn fx:id="empColBankBranch" prefWidth="81.0" text="City" />
-            <TableColumn fx:id="empColBankBranch1" prefWidth="57.0" text="Title" />
-            <TableColumn fx:id="empColBankBranch11" prefWidth="89.0" text="Job Role" />
-            <TableColumn fx:id="empColBankBranch111" prefWidth="98.0" text="Account No" />
-            <TableColumn fx:id="empColBankBranch1111" prefWidth="79.0" text="Branch" />
+            <TableColumn fx:id="empColName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="empColID" prefWidth="106.0" text="ID" />
+            <TableColumn fx:id="empColAddress" prefWidth="99.0" text="Address" />
+            <TableColumn fx:id="empColNIC" prefWidth="121.0" text="NIC" />
+            <TableColumn fx:id="empColContactNo" prefWidth="97.0" text="Contact No" />
+            <TableColumn fx:id="empColEmail" prefWidth="147.0" text="Email" />
+            <TableColumn fx:id="empColDOB" minWidth="8.0" prefWidth="87.0" text="DOB" />
+            <TableColumn fx:id="empColCity" prefWidth="81.0" text="City" />
+            <TableColumn fx:id="empColTitle" prefWidth="57.0" text="Title" />
+            <TableColumn fx:id="empColJobRole" prefWidth="89.0" text="Job Role" />
+            <TableColumn fx:id="empColAccountNo" prefWidth="98.0" text="Account No" />
+            <TableColumn fx:id="empColBranch" prefWidth="79.0" text="Branch" />
          </columns>
       </TableView>
       <JFXButton fx:id="btnUpdate" layoutX="924.0" layoutY="280.0" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #2ecc71;" text="UPDATE" textFill="#1b1616">
@@ -143,7 +143,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton fx:id="btnBack" layoutX="1019.0" layoutY="280.0" onAction="#btnBackOnAction" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #2ecc71;" text="BACK" textFill="#1b1616">
+      <JFXButton fx:id="btnBack" layoutX="1066.0" layoutY="14.0" onAction="#btnBackOnAction" opacity="0.47" prefHeight="49.0" prefWidth="69.0" style="-fx-background-color: #2ecc71;" text="BACK" textFill="#1b1616">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
@@ -151,7 +151,15 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton fx:id="btnRegister" layoutX="634.0" layoutY="281.0" onAction="#btnRegisterOnAction" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #2ecc71;" text="REGISTER" textFill="#1b1616">
+      <JFXButton fx:id="btnSave" layoutX="634.0" layoutY="281.0" onAction="#btnSaveOnAction" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #2ecc71;" text="SAVE" textFill="#1b1616">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnView" layoutX="1024.0" layoutY="281.0" onAction="#btnViewOnAction" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #2ecc71;" text="VIEW" textFill="#1b1616">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
